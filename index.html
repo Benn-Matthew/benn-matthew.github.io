@@ -1,1 +1,22 @@
-Hello World
+<!DOCTYPE html>
+        <html>
+        <head>
+          <title>Web Channel</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+
+        <body>
+        <script>
+          var onLoad = function(){
+            setTimeout(function(){
+              var e = document.getElementsByClassName("avaamo__icon-close-icon");
+              e[0].addEventListener("click", function(e){
+                console.log("click");
+                window.Avaamo.sendMessage("reset");
+              })
+            }, 100);
+          }
+        </script>
+          <script type="text/javascript" src="https://webchannel.avaamo.com/web_channels/40b57476-6068-41a0-85cc-b2a9ad81d7d4/demo.html?theme=avm-blue" onload="onLoad()"></script>
+        </body>
+      </html>
